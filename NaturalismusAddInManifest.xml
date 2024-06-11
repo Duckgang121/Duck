@@ -10,7 +10,7 @@
   <Description DefaultValue="Erstellt eine Präsentation über den Naturalismus."/>
   <IconUrl DefaultValue="https://github.com/Duckgang121/Duck/icon.png"/>
   <HighResolutionIconUrl DefaultValue="https://github.com/Duckgang121/Duck/hi-res-icon.png"/>
-  <SupportUrl DefaultValue="https://github.com/Duckgang121/Duck/support"/>
+  <SupportUrl DefaultValue="https://github.com/Duckgang121/Duck/"/>
   <AppDomains>
     <AppDomain>https://github.com/Duckgang121/Duck</AppDomain>
   </AppDomains>
@@ -22,4 +22,3 @@
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
-
