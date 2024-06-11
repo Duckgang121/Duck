@@ -8,17 +8,18 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Naturalismus Add-In"/>
   <Description DefaultValue="Erstellt eine Präsentation über den Naturalismus."/>
-  <IconUrl DefaultValue="https://deinedomain.com/icon.png"/>
-  <HighResolutionIconUrl DefaultValue="https://deinedomain.com/hi-res-icon.png"/>
-  <SupportUrl DefaultValue="https://deinedomain.com/support"/>
+  <IconUrl DefaultValue="https://github.com/Duckgang121/Duck/icon.png"/>
+  <HighResolutionIconUrl DefaultValue="https://github.com/Duckgang121/Duck/hi-res-icon.png"/>
+  <SupportUrl DefaultValue="https://github.com/Duckgang121/Duck/support"/>
   <AppDomains>
-    <AppDomain>https://deinedomain.com</AppDomain>
+    <AppDomain>https://github.com/Duckgang121/Duck</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Presentation"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://deinedomain.com/taskpane.html"/>
+    <SourceLocation DefaultValue="https://github.com/Duckgang121/Duck/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
+
