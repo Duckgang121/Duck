@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Naturalismus Add-In</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script>
+    Office.onReady(info => {
+      if (info.host === Office.HostType.PowerPoint) {
+        // Dein Initialisierungscode hier
+      }
+    });
+
+    async function createSlides() {
+      await PowerPoint.run(async context => {
+        const slides = [
+          { title: "Naturalismus (1880-1900)", content: "" },
+          { title: "Einführung in den Naturalismus", content: "Der Naturalismus war eine literarische Bewegung, die sich gegen die Romantik und den Idealismus richtete." },
+          { title: "Historischer Kontext", content: "Der Naturalismus entstand im späten 19. Jahrhundert als Reaktion auf die gesellschaftlichen Umwälzungen der Industrialisierung." },
+          { title: "Merkmale des Naturalismus", content: "Realistische Darstellung der Wirklichkeit, Determinismus, Einfluss der Naturwissenschaften." },
+          { title: "Wichtige Autoren", content: "Gerhart Hauptmann, Arno Holz, Emile Zola" },
+          { title: "Gerhart Hauptmann", content: "Gerhart Hauptmann (1862-1946) war einer der führenden Dramatiker des Naturalismus." },
+          { title: "Arno Holz", content: "Arno Holz (1863-1929) war ein bedeutender Dichter und Dramatiker des Naturalismus." },
+          { title: "Emile Zola", content: "Emile Zola (1840-1902) war ein französischer Schriftsteller und ein Vorreiter des Naturalismus." },
+          { title: "Werke von Gerhart Hauptmann", content: "Einige der bekanntesten Werke von Gerhart Hauptmann sind:" },
+          { title: "Die Weber", content: "Die Weber (1892) ist ein Drama, das den Aufstand der schlesischen Weber thematisiert." },
+          { title: "Vor Sonnenaufgang", content: "Vor Sonnenaufgang (1889) ist ein Drama über den moralischen und sozialen Verfall einer Familie." },
+          { title: "Werke von Arno Holz", content: "Einige der bekanntesten Werke von Arno Holz sind:" },
+          { title: "Papa Hamlet", content: "Papa Hamlet (1889) ist eine Erzählung, die als eine der ersten naturalistischen Werke in Deutschland gilt." },
+          { title: "Die Familie Selicke", content: "Die Familie Selicke (1890) ist ein Drama, das das Leben einer ärmlichen Familie darstellt." },
+          { title: "Werke von Emile Zola", content: "Einige der bekanntesten Werke von Emile Zola sind:" },
+          { title: "Germinal", content: "Germinal (1885) ist ein Roman über den Bergarbeiterstreik in Nordfrankreich." },
+          { title: "Nana", content: "Nana (1880) ist ein Roman über das Leben einer Kurtisane im Zweiten Kaiserreich." },
+          { title: "Stilistische Merkmale", content: "Genaue Beobachtung, detaillierte Beschreibung, Nutzung der Umgangssprache." },
+          { title: "Themen und Motive", content: "Armut, Alkoholismus, soziale Ungerechtigkeit, Vererbung, Milieu." },
+          { title: "Einfluss auf spätere Literatur", content: "Der Naturalismus beeinflusste stark die moderne Literatur und den Realismus." },
+          { title: "Beziehung zu anderen Epochen", content: "Der Naturalismus steht im Gegensatz zur Romantik und ist ein Vorläufer des Realismus." },
+          { title: "Rezeption des Naturalismus", content: "Der Naturalismus wurde unterschiedlich rezipiert und fand sowohl Zustimmung als auch Ablehnung." },
+          { title: "Zusammenfassung", content: "Der Naturalismus legte den Grundstein für die moderne realistische Literatur." },
+          { title: "Quellen und Literatur", content: "Für weitere Informationen siehe: Bücher und Artikel über den Naturalismus." }
+        ];
+
+        slides.forEach((slide, index) => {
+          let newSlide = context.presentation.slides.add();
+          newSlide.shapes.getItem(0).textFrame.textRange.text = slide.title;
+          newSlide.shapes.getItem(1).textFrame.textRange.text = slide.content;
+        });
+
+        await context.sync();
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Naturalismus Add-In</h1>
+  <button onclick="createSlides()">Folien erstellen</button>
+</body>
+</html>
